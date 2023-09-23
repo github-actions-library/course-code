@@ -3,7 +3,7 @@ on: [push]
 
 
 jobs:
-  run-shell-commands:
+  run-shell-commwsdfands:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
