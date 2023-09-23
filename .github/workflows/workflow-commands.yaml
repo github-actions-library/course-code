@@ -6,4 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setting an error message
-        run: echo "::error::Missing paranthssis"
+        run: echo "::error::Missing semi colon"
+      - name: Setting an error message with params
+        run: echo "::error title=Error title,file=GithubWorkflowApplication.java,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+      - name: Setting a debug message with params
+        run: echo "::debug title=Debug title,file=GithubWorkflowApplication.java,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+      - name: Setting an warning message with params
+        run: echo "::warning title=Warning title,file=GithubWorkflowApplication.java,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+      - name: Setting an notice message with params
+        run: echo "::notice title=Notice title,file=GithubWorkflowApplication.java,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+
+
