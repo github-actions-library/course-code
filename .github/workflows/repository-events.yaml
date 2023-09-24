@@ -1,8 +1,24 @@
 name: Repository Events
 on:
   push:
+    branches:
+      - main
+      - "feature/*"  #feature/0.1.0, feature/0.1.1, does not accept feature/feature/0.1.0
+      - "feature/**" #feature-A/feature-B/0.1.0, feature-A/feature-B/feature-C
+      - "!feature/0.1.0" #workflow not work for this branch
+
+    tags:
+      - v1.*  #match v1.1,v1.2
+      - "!v1.1.1"
+    paths:
+      - "**.java"
+      - "!app.java"
   pull_request:
     types: [opened, assigned, reopened]
+    branches:
+      - main
+    paths:
+      - "**.java"
   issues:
     types: [opened]
 
