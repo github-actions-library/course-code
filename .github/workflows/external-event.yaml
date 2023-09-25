@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #To access the inputs
-      -run: echo "Repository Dispatch"
+      -run: echo ${{ github.event.client_payload.env }}
+#      -run: echo "Repository Dispatch"
 
 
 
