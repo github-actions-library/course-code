@@ -12,6 +12,7 @@ jobs:
           echo ${{ join(github.event.issue.labels.*.name, ', ') }}
           echo ${{ join(github.event.issue.labels.*.name) }}
 
+
   using-expressions-and-contexts:
     runs-on: ubuntu latest
 #    runs-on: [ github-selfhosted-runner-autoscaler-chl]
