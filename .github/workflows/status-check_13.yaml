@@ -18,8 +18,8 @@ jobs:
         if: success()
         run: echo 'Runs on Success'
       - name: Always Runs
-        # if: success() || failure()
-        if: always()
+        if: success() || failure()
+#        if: always()
         run: echo 'Always Runs'
       - name: Runs When Cancelled
         if: cancelled()

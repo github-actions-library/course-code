@@ -1,6 +1,7 @@
 name: Expressions & Contexts
 on: [push, pull_request, issues, workflow_dispatch]
 run-name: "Expressions & Contexts by @${{ github.actor }}, event: ${{ github.event_name }}"
+if: gihub.event_name == pull_request
 jobs:
   runs-on-issues-and-prs:
     runs-on: ubuntu-latest
