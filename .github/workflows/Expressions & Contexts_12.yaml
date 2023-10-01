@@ -12,7 +12,7 @@ jobs:
         if: contains(github.event.issue.labels.*.name, 'bug')
         run: |
           echo ${{ join(github.event.issue.labels.*.name, ', ') }}
-          echo $join(github.event.issue.labels.*.name, ', ')
+          echo $github.event.issue.labels.*.name
   using-expressions-and-contexts:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
