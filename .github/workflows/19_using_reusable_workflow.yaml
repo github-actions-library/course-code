@@ -12,5 +12,5 @@ jobs:
     uses: github-actions-library/workflows/.github/workflows/reusable.yaml@main
 #    with:
 #      name: ${{ inputs.name }}
-#    secrets:
-#      access-token: ${{ secrets.ACCESS_TOKEN }}
+    secrets:
+      access-token: ${{ secrets.ACCESS_TOKEN }}
