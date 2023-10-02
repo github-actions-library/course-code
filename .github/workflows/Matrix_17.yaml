@@ -8,11 +8,11 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         node-version: [14, 15, 16]
-      fail-fast: true
+#      fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
-      - name: step 1
-        run: exit 1
+#      - name: step 1
+#        run: exit 1
       - name: default node version
         run: node -v
       - uses: actions/setup-node@v3
