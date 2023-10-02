@@ -10,6 +10,8 @@ on:
 jobs:
   calling-a-reusable-wf-in-the-same-repo:
     uses: ./.github/workflows/20_reusable_workflow.yaml
+    secrets:
+      access-token: ${{ secrets.ACCESS_TOKEN }}
   using-reusable-wf-output:
     runs-on: ubuntu-latest
     needs: calling-a-reusable-wf-in-the-same-repo
