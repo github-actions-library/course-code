@@ -1,6 +1,11 @@
 name: Reusable Workflow
 on:
   workflow_call:
+    inputs:
+      secrets:
+        access-token:
+          description: "Secret description"
+          required: true
     outputs:
       date:
         description: "Date Value"
