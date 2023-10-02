@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          ${{ github.workflow }}
-          ${{ github.event.inputs.environment }}
+          - ${{ github.workflow }}
+          - ${{ github.event.inputs.environment }}
           sleep 30
